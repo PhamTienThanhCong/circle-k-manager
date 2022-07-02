@@ -40,7 +40,7 @@
                                <input type="text" name="oldAvatar" value="{{ Auth::user()->avatar }}" hidden>
                            </div>
                            <div class="col-8">
-                               <img src="{{ asset('images/UserAvatar/'. Auth::user()->avatar) }}" alt="" width="150"
+                               <img src="{{ asset('dist/img/'. Auth::user()->avatar) }}" alt="" width="150"
                                    height="150">
                            </div>
                            <div class="row g-6 align-items-center">

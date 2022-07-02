@@ -18,7 +18,7 @@ class DatabaseSeeder extends Seeder
             
             // $this->call(DepartmentSeeder::class);
             // $this->call(RoleSeeder::class);
-            // $this->call(UserSeeder::class);
+            $this->call(UserSeeder::class);
         } catch (\Throwable $th) {
             //throw $th;
         }

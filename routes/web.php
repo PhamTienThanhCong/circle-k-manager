@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Auth\Middleware\Authenticate;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\PrmanageController;
 use App\Http\Controllers\UserController;
 /*
 |--------------------------------------------------------------------------
