@@ -29,8 +29,8 @@ class PrmanageController extends Controller
     public function index()
     {
         //
-        $allPrmanage = $this->prmanage->getListDepart();
-        return view('prmanages.index', compact('allPrmanage'));
+        $allDepartments = $this->prmanage->getListDepart();
+        return view('prmanages.index', compact('allDepartments'));
     }
     /**
      * Store a newly created resource in storage.

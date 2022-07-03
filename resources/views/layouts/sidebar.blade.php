@@ -44,20 +44,52 @@
                                 <p>Nhân viên</p>
                             </a>
                         </li>
-                        <li class="nav-item">
-                            <a href="{{ route('department.list') }}"
-                                class="nav-link {{ request()->is('department*') ? 'active' : '' }}">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Phòng ban</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="{{ route('prmanage.list') }}"
-                                class="nav-link {{ request()->is('prmanage*') ? 'active' : '' }}">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Quản lý dự án</p>
-                            </a>
-                        </li>
+                        @if (Auth::user()->is_admin)
+                            <li class="nav-item">
+                                <a href="{{ route('department.list') }}"
+                                    class="nav-link {{ request()->is('department*') ? 'active' : '' }}">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>Phòng ban</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="{{ route('prmanage.list') }}"
+                                    class="nav-link {{ request()->is('prmanage*') ? 'active' : '' }}">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>Quản lý dự án</p>
+                                </a>
+                            </li>
+                        @endif
+                        @if (Auth::user()->role_id == config('const.ROLE.MANAGE') && !Auth::user()->is_admin)
+                            <li class="nav-item">
+                                <a href="{{ route('schedule') }}"
+                                    class="nav-link {{ request()->is('schedule*') ? 'active' : '' }}">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>Xếp ca làm việc</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="{{ route('prmanage.list') }}"
+                                    class="nav-link {{ request()->is('prmanage*') ? 'active' : '' }}">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>Khen thưởng và kỉ luật</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="{{ route('prmanage.list') }}"
+                                    class="nav-link {{ request()->is('prmanage*') ? 'active' : '' }}">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>Quản lý lương</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="{{ route('prmanage.list') }}"
+                                    class="nav-link {{ request()->is('prmanage*') ? 'active' : '' }}">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>Quản chấm công</p>
+                                </a>
+                            </li>
+                        @endif
                     </ul>
                 </li>
             </ul>

@@ -14,7 +14,7 @@
                 <div class="col-lg-4">
                     <div class="card mb-4">
                         <div class="card-body text-center">
-                            <img src="{{ asset('dist/img/' . Auth::user()->avatar) }}" alt="avatar"
+                            <img src="{{ asset('images/UserAvatar/' . Auth::user()->avatar) }}" alt="avatar"
                                 class="rounded-circle img-fluid" style="width: 150px;">
                             <h5 class="my-3">{{ $user->fullname }}</h5>
                             <p class="text-muted mb-1">{{ $user->role->name }}</p>

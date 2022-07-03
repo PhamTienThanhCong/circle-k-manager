@@ -142,7 +142,7 @@
                                     @foreach ($allUser as $user)
                                         <tr>
                                             <td scope="row">
-                                                <img src="{{ asset('dist/img/' . $user->avatar) }}"
+                                                <img src="{{ asset('images/UserAvatar/' . $user->avatar) }}"
                                                     height="150px" width="150px">
                                             <td scope="row">
                                                 {{ $user->email }}</td>
