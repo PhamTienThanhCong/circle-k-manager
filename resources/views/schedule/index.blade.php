@@ -61,12 +61,14 @@
                                 </button>
                             </div>
                         @enderror
-                        <div class="card-body">
-                            <div class="col-md-3">
-                                <button type="button" class="btn btn-success addButton" data-bs-toggle="modal"
-                                    data-bs-target="#formModal"><i class="fas fa-user-plus"></i>Thêm ca làm việc</button>
+                        @if (Auth::user()->role_id == config('const.ROLE.MANAGE'))
+                            <div class="card-body">
+                                <div class="col-md-3">
+                                    <button type="button" class="btn btn-success addButton" data-bs-toggle="modal"
+                                        data-bs-target="#formModal"><i class="fas fa-user-plus"></i>Thêm ca làm việc</button>
+                                </div>
                             </div>
-                        </div>
+                        @endif
                         <!-- /.card-header -->
                         <div class="card-body">
                             <table id="" class="table table-bordered table-striped">

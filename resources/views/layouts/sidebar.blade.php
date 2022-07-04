@@ -90,6 +90,15 @@
                                 </a>
                             </li>
                         @endif
+                        @if (Auth::user()->role_id == config('const.ROLE.USER'))
+                        <li class="nav-item">
+                            <a href="{{ route('schedule') }}"
+                                class="nav-link {{ request()->is('schedule*') ? 'active' : '' }}">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Lịch làm việc</p>
+                            </a>
+                        </li>
+                        @endif
                     </ul>
                 </li>
             </ul>

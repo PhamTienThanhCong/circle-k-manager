@@ -49,8 +49,8 @@ Route::middleware(['auth'])->group(function () {
             Route::get('/prmanage/list', [PrmanageController::class, 'index'])->name('prmanage.list');
         });
 
+        Route::get('/schedule', [ScheduleController::class, 'index'])->name('schedule');
         Route::middleware('role.checker:null ,1')->group(function () {
-            Route::get('/schedule', [ScheduleController::class, 'index'])->name('schedule');
             Route::post('/schedule/create', [ScheduleController::class, 'store'])->name('schedule.create');
         });
 
